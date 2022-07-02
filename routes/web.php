@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadsController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,7 @@ use App\Http\Controllers\UploadsController;
 // });
 
 Route::get('/', [UploadsController::class,'index'])->name('home');
+Route::post('/upload', [UploadsController::class,'uploadcsv'])->name('uploadcsv');
 
 Auth::routes();
 

@@ -5,10 +5,13 @@
  ## Создаем форму загрузки файла
  - поле выбор файла
  - поле select формат ответа
+ - resources\views\forms\index.blade.php
  ## Создаем контроллер выводящий форму ( работающий с формой )
- - app\Http\Controllers\GentreeController.php
+ - app\Http\Controllers\UploadsController.php
  ## Создаем router на выдачу формы
- - routes\web.php GetFormUploadFile()
+ - routes\web.php 
+ - Route::get('/', [UploadsController::class,'index'])->name('home');
+ - Route::get('/uploadcsv', [UploadsController::class,'uploadcsv'])->name('uploadcsv');
  ## Создаем view формы
  - resources\views\forms\loadsoursefile.blade.php 
  ## Создаем router на прием формы
