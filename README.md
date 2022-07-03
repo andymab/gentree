@@ -1,3 +1,8 @@
+# Установка
+- git clone https://github.com/andymab/gentree.git you-domain
+- cd you-domain
+- composer install
+
 # Реализация
 в задании сказано:
  - Можем грузить файлы с разным расширением (другие расширения не входят в задание)
